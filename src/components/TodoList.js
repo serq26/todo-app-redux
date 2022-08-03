@@ -8,7 +8,7 @@ export default function TodoList() {
   const todos = useSelector(state => state.todo.todos)
   
   return (
-    <ul ref={animationParent}>
+    <ul ref={animationParent} style={{display: todos.length <= 0 ? "none": ""}}>
       {
         todos.map((todo) => <TodoItem key={todo.id} todo={todo} />)
       }
