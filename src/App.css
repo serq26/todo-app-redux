@@ -217,3 +217,18 @@ header button:hover{
 .modal .modal-inner button:hover{
     background: rgb(81, 94, 107);
 }
+
+@media only screen and (max-width:768px){
+    header{
+        padding: 0 10px;
+        flex-flow: column;
+        padding-bottom: 10px;
+    }
+    .content form{
+        width: 95%;
+    }
+    .content ul{
+        width: 80%;
+        padding: 20px;
+    }
+}
