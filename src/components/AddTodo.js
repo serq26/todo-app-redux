@@ -10,7 +10,6 @@ export default function AddTodo() {
 
   const submitHandle = (e) => {
     e.preventDefault()
-    console.log("dasdsa")
 
     addTodoHandle({
       title: todo,

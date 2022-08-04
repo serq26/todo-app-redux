@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const initialState = {
-    todos: []
+    todos: JSON.parse(localStorage.getItem("todos")) || []
 }
 
 const todos = createSlice({
@@ -14,6 +14,8 @@ const todos = createSlice({
                 action.payload,
                 ...state.todos
             ]
+            
+            localStorage.setItem("todos",JSON.stringify(state.todos))
         },
         editTodo: (state, action) => {
             state.todos = state.todos.map(todo => {
