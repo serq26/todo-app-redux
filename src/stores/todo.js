@@ -25,9 +25,11 @@ const todos = createSlice({
                 }
                 return todo
             })
+            localStorage.setItem("todos",JSON.stringify(state.todos))
         },
         deleteTodo: (state, action) => {
             state.todos = state.todos.filter(todo => todo.id !== action.payload)
+            localStorage.setItem("todos",JSON.stringify(state.todos))
         }
     }
 })
